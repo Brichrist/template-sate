@@ -48,6 +48,9 @@ h2 {
 
 .navbar {
   padding-bottom: 0px;
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
 }
 
 .navbar .nav-link {
@@ -104,6 +107,28 @@ h2 {
      object-position: center;
   -webkit-transition: width 0.4s linear,height 0.4s linear;
   transition: width 0.4s linear,height 0.4s linear;
+}
+
+#splash-screen {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fcf3c5;
+  z-index: 100;
+}
+
+#splash-screen .logo-splash-screen {
+  opacity: 1;
+  position: absolute;
+  width: 40vw;
+  height: 25vh;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 #home {
@@ -315,6 +340,19 @@ h2 {
   height: 100vh;
 }
 
+#what-we-do .shadow-button-play {
+  position: absolute;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  top: 30.8%;
+  left: 25%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background-color: #00c583;
+  padding-left: 20px;
+}
+
 #what-we-do .button-play {
   position: absolute;
   height: 130px;
@@ -341,6 +379,34 @@ h2 {
   background-color: white;
   color: black;
   font-weight: 800;
+}
+
+#what-we-do .button-join-us {
+  position: absolute;
+  height: 50px;
+  width: 110px;
+  border-radius: 30px;
+  top: 65%;
+  left: 35%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: white;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+#what-we-do .button-list-video {
+  position: absolute;
+  height: 50px;
+  width: 110px;
+  border-radius: 30px;
+  top: 65%;
+  left: 43%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: white;
+  font-weight: 800;
+  font-size: 0.9rem;
 }
 
 #what-we-do .background {

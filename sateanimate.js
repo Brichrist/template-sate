@@ -1,5 +1,22 @@
-gsap.from("#home .title-tag",{scale:0,duration:2,opacity:0 ,transformOrigin:"0 50%"})
-gsap.from("#home .CP-child",{y:200,duration:2,opacity:0, delay:1, transformOrigin:"100% 0%"})
+function removeElement(element) {
+  $(element).remove();
+}
+
+
+
+
+
+let tl_splashscreen=gsap.timeline({})
+tl_splashscreen.from(".logo-splash-screen",{duration:3,alpha: 0,scale:0})
+.to(".logo-splash-screen",{duration:1,alpha: 0})
+.to("#splash-screen",{duration:1,alpha: 0},"-=0.8")
+.call(removeElement,["#splash-screen"])
+
+// {idName:"-=splash-screen"}
+.from("#home .title-tag",{scale:0,duration:2,opacity:0 ,transformOrigin:"0 50%"})
+.from("#home .CP-child",{y:200,duration:2,opacity:0, delay:1, transformOrigin:"100% 0%"},"-=1")
+
+
 
 
 
@@ -126,5 +143,34 @@ tl_eventtextcontentimg.from(".img-content .img-4", { opacity: 0 },"-=2")
 tl_eventtextcontentimg.to(".img-content .img-4", { opacity: 0,delay: 3 })
 tl_eventtextcontentimg.from(".img-content .img-1", { opacity: 0},"-=2")
 tl_eventtextcontentimg.from(".img-content .img-1", { opacity: 1 ,delay: 2  })
+
+
+
+// let hover_playbutton = document.querySelector("#what-we-do .button-play");
+let tl_playbuttonaction= gsap.timeline({ 
+  repeat:-1,
+  paused:true
+})
+
+let hover_playbuttonaction = tl_playbuttonaction.from(".shadow-button-play", {
+    opacity:0,
+    duration:1.5,
+    scaleX:0,
+    scaleY:0,
+})
+.to(".shadow-button-play",{
+    opacity:0,
+    duration:1,
+},
+"-=0.5"
+);
+
+$(document).on("mouseenter", "#what-we-do .button-play", function() {
+  hover_playbuttonaction.play();
+}).on("mouseleave", "#what-we-do .button-play", function(){
+  hover_playbuttonaction.restart();
+  hover_playbuttonaction.pause();
+});
+
 
 
