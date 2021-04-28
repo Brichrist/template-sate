@@ -140,28 +140,28 @@ html {
   background-color: #ffb008;
 }
 
-#home .toon-bg .toon-bg-1 {
+#home .toon-bg-1 {
   position: absolute;
   height: 50px;
   left: 35%;
   top: 60%;
 }
 
-#home .toon-bg .toon-bg-2 {
+#home .toon-bg-2 {
   position: absolute;
   height: 50px;
   left: 45%;
   top: 85%;
 }
 
-#home .toon-bg .toon-bg-3 {
+#home .toon-bg-3 {
   position: absolute;
   height: 60px;
   left: 5%;
   top: 65%;
 }
 
-#home .toon-bg .toon-bg-4 {
+#home .toon-bg-4 {
   position: absolute;
   height: 50px;
   left: 0%;
@@ -170,7 +170,7 @@ html {
           transform: scaleX(-1);
 }
 
-#home .toon-bg .toon-bg-5 {
+#home .toon-bg-5 {
   position: absolute;
   height: 60px;
   left: 55%;
@@ -179,7 +179,7 @@ html {
           transform: scaleX(-1);
 }
 
-#home .toon-bg .toon-bg-6 {
+#home .toon-bg-6 {
   position: absolute;
   height: 60px;
   left: 30%;
@@ -188,7 +188,7 @@ html {
           transform: scaleX(-1);
 }
 
-#home .toon-bg .toon-bg-7 {
+#home .toon-bg-7 {
   position: absolute;
   height: 50px;
   left: 93%;
@@ -197,7 +197,7 @@ html {
           transform: scaleX(-1);
 }
 
-#home .toon-bg .toon-bg-8 {
+#home .toon-bg-8 {
   position: absolute;
   height: 50px;
   left: 85%;
@@ -206,7 +206,7 @@ html {
           transform: scaleX(-1);
 }
 
-#home .toon-bg .toon-bg-9 {
+#home .toon-bg-9 {
   position: absolute;
   height: 50px;
   left: 90%;
