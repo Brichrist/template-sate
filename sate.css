@@ -109,6 +109,10 @@ h2 {
   transition: width 0.4s linear,height 0.4s linear;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #splash-screen {
   height: 100vh;
   width: 100vw;
@@ -117,7 +121,7 @@ h2 {
 }
 
 #splash-screen .logo-splash-screen {
-  opacity: 1;
+  visibility: hidden;
   position: absolute;
   width: 40vw;
   height: 25vh;
@@ -136,6 +140,81 @@ h2 {
   background-color: #ffb008;
 }
 
+#home .toon-bg .toon-bg-1 {
+  position: absolute;
+  height: 50px;
+  left: 35%;
+  top: 60%;
+}
+
+#home .toon-bg .toon-bg-2 {
+  position: absolute;
+  height: 50px;
+  left: 45%;
+  top: 85%;
+}
+
+#home .toon-bg .toon-bg-3 {
+  position: absolute;
+  height: 60px;
+  left: 5%;
+  top: 65%;
+}
+
+#home .toon-bg .toon-bg-4 {
+  position: absolute;
+  height: 50px;
+  left: 0%;
+  top: 45%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#home .toon-bg .toon-bg-5 {
+  position: absolute;
+  height: 60px;
+  left: 55%;
+  top: 20%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#home .toon-bg .toon-bg-6 {
+  position: absolute;
+  height: 60px;
+  left: 30%;
+  top: 15%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#home .toon-bg .toon-bg-7 {
+  position: absolute;
+  height: 50px;
+  left: 93%;
+  top: 30%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#home .toon-bg .toon-bg-8 {
+  position: absolute;
+  height: 50px;
+  left: 85%;
+  top: 15%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#home .toon-bg .toon-bg-9 {
+  position: absolute;
+  height: 50px;
+  left: 90%;
+  top: 95%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
 #home #sobek {
   position: absolute;
   top: -600px;
@@ -152,10 +231,19 @@ h2 {
   margin-right: 100px;
 }
 
+#home h2 {
+  color: #003102;
+  font-weight: 500;
+  font-size: 2.5rem;
+  font-family: 'Dancing Script', cursive;
+}
+
 #home h1 {
   color: #003102;
   font-weight: bolder;
   margin-left: 60px;
+  margin-top: -10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #home hr {
@@ -187,7 +275,7 @@ h2 {
 
 #home .btn-red {
   background-color: #8c1211;
-  margin: 20px 0px 30px 0px;
+  margin: 35px 0px 25px 0px;
 }
 
 #home .swiper-container {
@@ -248,6 +336,10 @@ h2 {
   background-size: cover;
 }
 
+#product .main-title {
+  padding-top: 100px;
+}
+
 #product .title {
   width: 15%;
   border: 2px solid black;
@@ -279,13 +371,14 @@ h2 {
 
 #event {
   background-color: #003102;
-  height: 100vh;
+  height: 110vh;
   padding: 100px;
   width: auto;
 }
 
 #event .text-content {
   position: relative;
+  padding-top: 50px;
 }
 
 #event .text-content h1 {
@@ -293,6 +386,7 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   color: #fcf3c5;
   position: absolute;
+  visibility: hidden;
 }
 
 #event .text-content span {
@@ -302,9 +396,13 @@ h2 {
 #event .img-content {
   color: #fcf3c5;
   font-size: 30px;
-  margin-top: 30px;
+  margin-top: 100px;
   margin-left: 130px;
   position: relative;
+}
+
+#event .img-content .img {
+  visibility: hidden;
 }
 
 #event .img-content .fa-truck {
@@ -337,7 +435,7 @@ h2 {
 
 #what-we-do {
   position: relative;
-  height: 100vh;
+  height: 110vh;
 }
 
 #what-we-do .shadow-button-play {
@@ -345,7 +443,7 @@ h2 {
   height: 180px;
   width: 180px;
   border-radius: 50%;
-  top: 30.8%;
+  top: 35.8%;
   left: 25%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -358,7 +456,7 @@ h2 {
   height: 130px;
   width: 130px;
   border-radius: 50%;
-  top: 35%;
+  top: 40%;
   left: 25%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -372,7 +470,7 @@ h2 {
   height: 50px;
   width: 110px;
   border-radius: 30px;
-  top: 65%;
+  top: 70%;
   left: 25%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -386,7 +484,7 @@ h2 {
   height: 50px;
   width: 110px;
   border-radius: 30px;
-  top: 65%;
+  top: 70%;
   left: 35%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -400,7 +498,7 @@ h2 {
   height: 50px;
   width: 110px;
   border-radius: 30px;
-  top: 65%;
+  top: 70%;
   left: 43%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -426,7 +524,7 @@ h2 {
 
 #what-we-do #myVideo {
   position: absolute;
-  margin-top: 20px;
+  margin-top: 50px;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 50px;
@@ -436,16 +534,33 @@ h2 {
 #what-we-do h1 {
   position: absolute;
   color: white;
-  top: 38%;
+  top: 43%;
   left: 25%;
   -webkit-transform: translate(50%);
           transform: translate(50%);
 }
 
+#what-we-do .text {
+  color: white;
+  font-size: 39px;
+  visibility: hidden;
+}
+
+#what-we-do .mask {
+  margin: 5px;
+  width: 300px;
+  height: 70px;
+  background-color: aqua;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
 #what-we-do p {
   position: absolute;
   color: white;
-  top: 46%;
+  top: 51%;
   left: 34%;
   font-size: 1.5rem;
 }

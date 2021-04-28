@@ -2,20 +2,26 @@ function removeElement(element) {
   $(element).remove();
 }
 
-
-
+function toonbganmt(){
+  let tl_toonbganmt = gsap.timeline({ repeat: -1 ,delay:6})
+  .to(".toon-bg-anmt-1", {duration:1,opacity:0,stagger:0.4})
+  .to(".toon-bg-anmt-1", {duration:1,opacity:1,stagger:0.4},"-=0.8")
+  .to(".toon-bg-anmt-2", {duration:1,opacity:0,stagger:0.5},"-=1.5")
+  .to(".toon-bg-anmt-2", {duration:1,opacity:1,stagger:0.5},"-=0.8")
+}
 
 
 let tl_splashscreen=gsap.timeline({})
-tl_splashscreen.from(".logo-splash-screen",{duration:3,alpha: 0,scale:0})
+tl_splashscreen.from(".logo-splash-screen",{duration:3,autoAlpha: 0,scale:0})
 .to(".logo-splash-screen",{duration:1,alpha: 0})
 .to("#splash-screen",{duration:1,alpha: 0},"-=0.8")
 .call(removeElement,["#splash-screen"])
 
-// {idName:"-=splash-screen"}
+.from(".toon-bg-anmt-1",{duration:0.25,opacity:0,stagger:0.1})
+.from(".toon-bg-anmt-2",{duration:0.25,opacity:0,stagger:0.1})
 .from("#home .title-tag",{scale:0,duration:2,opacity:0 ,transformOrigin:"0 50%"})
-.from("#home .CP-child",{y:200,duration:2,opacity:0, delay:1, transformOrigin:"100% 0%"},"-=1")
-
+.from("#home .CP-child",{y:200,duration:2,opacity:0, delay:1, transformOrigin:"100% 0%"},"-=1.5")
+.add(toonbganmt())
 
 
 
@@ -52,6 +58,17 @@ tl_homeslidshow.to(".circle3", { duration:1,alpha: 0.5},"-=0.6")
   //   opacity:0,
   //   duration:1,
   // },"-=0.5")
+
+  if ($(window).scrollTop()) {
+    $(".navbar").addClass("nav-scroll");
+
+    $(".nav-link").addClass("nav-link-scroll");
+    $(".nav-link-scroll").removeClass("nav-link");
+
+    $(".logo").addClass("logo-scroll");
+    $(".logo-scroll").removeClass("logo");
+    
+  }
 
 
 $(window).scroll(function () {
@@ -113,36 +130,36 @@ const tl_eventtextcontent = gsap.timeline({
   
   repeat:-1
 })
-tl_eventtextcontent.to(".text-content .h1-1", { opacity: 0})
-tl_eventtextcontent.from(".text-content .h1-2", { opacity: 0},"-=2")
+// tl_eventtextcontent.to(".text-content .h1-1", { autoAlpha: 0})
+tl_eventtextcontent.from(".text-content .h1-2", { autoAlpha: 0},"-=2")
 
-tl_eventtextcontent.to(".text-content .h1-2", { opacity: 0,delay: 3 })
-tl_eventtextcontent.from(".text-content .h1-3", { opacity: 0},"-=2")
+tl_eventtextcontent.to(".text-content .h1-2", { autoAlpha: 0,delay: 1.7 })
+tl_eventtextcontent.from(".text-content .h1-3", { autoAlpha: 0},"-=2")
 
-tl_eventtextcontent.to(".text-content .h1-3", { opacity: 0,delay: 3 })
-tl_eventtextcontent.from(".text-content .h1-4", { opacity: 0 },"-=2")
+tl_eventtextcontent.to(".text-content .h1-3", { autoAlpha: 0,delay: 1.7 })
+tl_eventtextcontent.from(".text-content .h1-4", { autoAlpha: 0 },"-=2")
 
-tl_eventtextcontent.to(".text-content .h1-4", { opacity: 0,delay: 3 })
-tl_eventtextcontent.from(".text-content .h1-1", { opacity: 0},"-=2")
-tl_eventtextcontent.from(".text-content .h1-1", { opacity: 1 ,delay: 2  })
+tl_eventtextcontent.to(".text-content .h1-4", { autoAlpha: 0,delay: 1.7 })
+tl_eventtextcontent.from(".text-content .h1-1", { autoAlpha: 0},"-=2")
+tl_eventtextcontent.to(".text-content .h1-1", { autoAlpha: 0 })
 
 const tl_eventtextcontentimg = gsap.timeline({ 
   defaults: { duration: 3},
   
   repeat:-1
 })
-tl_eventtextcontentimg.to(".img-content .img-1", { opacity: 0})
-tl_eventtextcontentimg.from(".img-content .img-2", { opacity: 0},"-=2")
+// tl_eventtextcontentimg.to(".img-content .img-1", { autoAlpha: 0})
+tl_eventtextcontentimg.from(".img-content .img-2", { autoAlpha: 0},"-=2")
 
-tl_eventtextcontentimg.to(".img-content .img-2", { opacity: 0,delay: 3 })
-tl_eventtextcontentimg.from(".img-content .img-3", { opacity: 0},"-=2")
+tl_eventtextcontentimg.to(".img-content .img-2", { autoAlpha: 0,delay: 1.7 })
+tl_eventtextcontentimg.from(".img-content .img-3", { autoAlpha: 0},"-=2")
 
-tl_eventtextcontentimg.to(".img-content .img-3", { opacity: 0,delay: 3 })
-tl_eventtextcontentimg.from(".img-content .img-4", { opacity: 0 },"-=2")
+tl_eventtextcontentimg.to(".img-content .img-3", { autoAlpha: 0,delay: 1.7 })
+tl_eventtextcontentimg.from(".img-content .img-4", { autoAlpha: 0 },"-=2")
 
-tl_eventtextcontentimg.to(".img-content .img-4", { opacity: 0,delay: 3 })
-tl_eventtextcontentimg.from(".img-content .img-1", { opacity: 0},"-=2")
-tl_eventtextcontentimg.from(".img-content .img-1", { opacity: 1 ,delay: 2  })
+tl_eventtextcontentimg.to(".img-content .img-4", { autoAlpha: 0,delay: 1.7 })
+tl_eventtextcontentimg.from(".img-content .img-1", { autoAlpha: 0},"-=2")
+tl_eventtextcontentimg.to(".img-content .img-1", { autoAlpha: 0 })
 
 
 
@@ -172,5 +189,12 @@ $(document).on("mouseenter", "#what-we-do .button-play", function() {
   hover_playbuttonaction.pause();
 });
 
+TweenLite.defaultEase = Power0.easeNone;
 
+var tl_popup = new TimelineMax ();
 
+tl_popup.from($(".mask2"),2,{width:0},1)
+// .from($("#rect"),2,{left:400},1)
+.to($(".text"),0.05,{autoAlpha:0, repeat:5, yoyo:true})
+// TweenMax.from(".mask1", 2.2, {width:"0px",  ease:Power0.easeNone, repeat:-1, repeatDelay:2})
+// TweenMax.from(".mask2", 2.2, {width:"0px", ease:Power0.easeNone, repeat:-1, repeatDelay:2})

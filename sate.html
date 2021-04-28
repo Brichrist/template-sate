@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/472c7ba5af.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -24,16 +25,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-lg-12 d-flex justify-content-end ">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Product</a>
+                <a class="nav-link" href="#product">Product</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Event</a>
+                <a class="nav-link" href="#event">Event</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">What We Do</a>
+                <a class="nav-link" href="#what-we-do">What We Do</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Testimoni</a>
@@ -52,10 +53,22 @@
 
     <section id="home">
         <img id=sobek src="asset/Untitled-1.png" alt="">
+        <div class="toon-bg">
+          <img class="toon-bg-anmt-1 toon-bg-1" src="./asset/png toon/garpu.png" alt="">
+          <img class="toon-bg-anmt-2 toon-bg-2" src="./asset/png toon/daging.png" alt="">
+          <img class="toon-bg-anmt-1 toon-bg-3" src="./asset/png toon/pisau.png" alt="">
+          <img class="toon-bg-anmt-2 toon-bg-4" src="./asset/png toon/sate.png" alt="">
+          <img class="toon-bg-anmt-1 toon-bg-5" src="./asset/png toon/panggangan.png" alt="">
+          <img class="toon-bg-anmt-2 toon-bg-6" src="./asset/png toon/ayam.png" alt="">
+          <img class="toon-bg-anmt-1 toon-bg-7" src="./asset/png toon/garpu.png" alt="">
+          <img class="toon-bg-anmt-2 toon-bg-8" src="./asset/png toon/daging.png" alt="">
+          <img class="toon-bg-anmt-1 toon-bg-9" src="./asset/png toon/ayam.png" alt="">
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6" id="CP">
                   <div class="title-tag">
+                    <h2>Restaurant</h2>
                     <h1>Sate Khas Blora</h1>
                     <hr>
                     <p class="lead">A simple restaurant in malang bring you a very delicious satay</p>
@@ -93,7 +106,7 @@
     </section>
 
     <section id="product">
-      <h3 class="text-center pt-lg-5">PRODUCT | <span style="color: rgb(82, 82, 82);">ALL MENU</span></h3>
+      <h3 class="text-center main-title">PRODUCT | <span style="color: rgb(82, 82, 82);">ALL MENU</span></h3>
       <hr class="title"> 
       <h5 class="text-center fw-light fst-italic">We did many experiments, to give you a satisfying taste.So come and enjoy your food</h5>
       <div class="container pt-lg-5">
@@ -207,10 +220,10 @@
           </div>
           <div class="col-6 " >
             <div class="img-content d-flex justify-content-center">
-              <i class="fas fa-truck fa-10x img-3"></i>
-              <h1 class="free img-2">FREE</h1>
-              <h1 class="sale img-1">25% SALE</h1>
-              <i class="fas fa-users img-4 fa-10x"></i>
+              <i class="fas fa-truck fa-10x img-3 img"></i>
+              <h1 class="free img-2 img">FREE</h1>
+              <h1 class="sale img-1 img">25% SALE</h1>
+              <i class="fas fa-users img-4 fa-10x img"></i>
             </div>
           </div>
         </div>
@@ -229,8 +242,34 @@
       <p >This is what we do! <em>(click play button)</em></p> 
       <button type="button" class="btn button-share">SHARE</button>
       <a href="#" class="button-join-us text-center"><i class="fas fa-user-friends fa-2x"></i><br>JOIN US</a>
-      <a href="#" class="button-list-video text-center"><i class="fas fa-list fa-2x"></i><br>LIST</a>
+      <a href="#" class="button-list-video text-center" data-bs-toggle="modal" data-bs-target="#list-video" ><i class="fas fa-list fa-2x"></i><br>LIST</a>
+      <div class="mask mask2">
+        <div class="text">TestingTestingTesting</div>
+      </div>
     </section>
+
+
+
+<div class="modal fade" id="list-video" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="list-video-Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="list-video-Label">Video List</h5>
+      </div>
+      <div class="modal-body">
+        <div class="list-group group-video">
+          <a class="list-group-item list-group-item-action switch-active active">The current link item</a>
+          <a class="list-group-item list-group-item-action switch-active">A second link item</a>
+          <a class="list-group-item list-group-item-action switch-active">A third link item</a>
+          <a class="list-group-item list-group-item-action switch-active">A fourth link item</a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Choose This One</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>

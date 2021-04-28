@@ -1,10 +1,15 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 #splash-screen{
     height: 100vh;
     width: 100vw;
     background-color: $color2;
     z-index: 100;
+    // overflow: hidden;
     .logo-splash-screen{
-        opacity: 1;
+        visibility:hidden;
         position: absolute;
         width: 40vw;
         height: 25vh;
@@ -20,16 +25,91 @@
 #home{
     height: 120vh ;
     background-color: $color1;
+    // position: relative;
     // deleteafter
     // border-style: solid;
     // border-width: medium;
     // deleteafter
+    .toon-bg{
+    
+        .toon-bg-1{
+            position: absolute;
+            height: 50px;
+            left: 35%;
+            top: 60%;
+            // opacity: 0.7;
+        }
+        .toon-bg-2{
+            position: absolute;
+            height: 50px;
+            left: 45%;
+            top: 85%;
+            // opacity: 0.8;
+        }
+        .toon-bg-3{
+            position: absolute;
+            height: 60px;
+            left: 5%;
+            top: 65%;
+            // opacity: 0.8;
+        }
+        .toon-bg-4{
+            position: absolute;
+            height: 50px;
+            left: 0%;
+            top: 45%;
+            // opacity: 0.8;
+            transform: scaleX(-1);
+        }
+        .toon-bg-5{
+            position: absolute;
+            height: 60px;
+            left: 55%;
+            top: 20%;
+            // opacity: 0.8;
+            transform: scaleX(-1);
+        }
+        .toon-bg-6{
+            position: absolute;
+            height: 60px;
+            left: 30%;
+            top: 15%;
+            // opacity: 0.8;
+            transform: scaleX(-1);
+        }
+        .toon-bg-7{
+            position: absolute;
+            height: 50px;
+            left: 93%;
+            top: 30%;
+            // opacity: 0.7;
+            transform: scaleX(-1);
+        }
+        .toon-bg-8{
+            position: absolute;
+            height: 50px;
+            left: 85%;
+            top: 15%;
+            // opacity: 0.7;
+            transform: scaleX(-1);
+        }
+        .toon-bg-9{
+            position: absolute;
+            height: 50px;
+            left: 90%;
+            top: 95%;
+            // opacity: 0.7;
+            transform: scaleX(-1);
+        }
+
+    }
 
     #sobek{
         position:absolute;
+
         top: -600px;
         left: -250px;
-        transform: rotate(-25deg);
+        transform: rotate(-25deg);  
         width:80%;
         height:200%;
     }
@@ -38,10 +118,20 @@
         margin-left: 150px;
         margin-right: 100px;
     }
+    h2{
+        color: $color3;
+        font-weight: 500;
+        font-size: 2.5rem;
+        // margin-left: 60px;
+        // margin-top: 60px;
+        font-family: 'Dancing Script', cursive;
+    }
     h1{
         color: $color3;
         font-weight: bolder;
         margin-left: 60px;
+        margin-top: -10px;
+        font-family: 'Montserrat', sans-serif;
     }
     hr{
         margin:0px;
@@ -59,7 +149,7 @@
         }
         .phone-hide{
             opacity: 0;
-        }
+        }   
     }
     p{
         color: $color3;
@@ -67,7 +157,7 @@
 
     .btn-red{
         background-color: $color4;
-        margin: 20px 0px 30px 0px;
+        margin: 35px 0px 25px 0px;
     }
     .swiper-container {
         width: 350px;
@@ -119,6 +209,9 @@
 }
 
 #product{
+    .main-title{
+        padding-top: 100px;
+    }
     
     background-image: url(./asset/pine-wood-texture.jpg);
     background-size: cover;
@@ -156,19 +249,22 @@
 
 #event{
     background-color: $color3;
-    height: 100vh;
+    height: 110vh;
     padding: 100px;
     width: auto;
     
     .text-content{
         position: relative;
+        padding-top: 50px;
         h1{
             font-size: 50px;
             font-family: 'Montserrat', sans-serif;
             color: $color2;
-            position: absolute;
-            
+            position: absolute; 
+            visibility: hidden; 
         }
+
+        
         span{
             color: $color1;
         } 
@@ -176,9 +272,12 @@
     .img-content{
         color: $color2;
         font-size: 30px;
-        margin-top: 30px;
+        margin-top: 100px;
         margin-left: 130px;
         position: relative;
+        .img{
+            visibility: hidden; 
+        }
         .fa-truck{
             position: absolute;
             margin: auto;
@@ -208,13 +307,13 @@
 
 #what-we-do{
     position: relative;
-    height: 100vh;
+    height: 110vh;
     .shadow-button-play{
         position: absolute;
         height: 180px;
         width: 180px;
         border-radius: 50%;
-        top: 30.8%;
+        top: 35.8%;
         left:25%;
         transform: translate(-50%);
         background-color: rgb(0, 197, 131);
@@ -225,7 +324,7 @@
         height: 130px;
         width: 130px;
         border-radius: 50%;
-        top: 35%;
+        top: 40%;
         left:25%;
         transform: translate(-50%);
         background-color: rgb(0, 197, 131);
@@ -237,7 +336,7 @@
         height: 50px;
         width: 110px;
         border-radius: 30px;
-        top: 65%;
+        top: 70%;
         left:25%;
         transform: translate(-50%);
         background-color: rgb(255, 255, 255);
@@ -249,7 +348,7 @@
         height: 50px;
         width: 110px;
         border-radius: 30px;
-        top: 65%;
+        top: 70%;
         left:35%;
         transform: translate(-50%);
         color: rgb(255, 255, 255);
@@ -261,7 +360,7 @@
         height: 50px;
         width: 110px;
         border-radius: 30px;
-        top: 65%;
+        top: 70%;
         left:43%;
         transform: translate(-50%);
         color: rgb(255, 255, 255);
@@ -284,7 +383,7 @@
     }
     #myVideo {
         position: absolute;
-        margin-top: 20px;
+        margin-top: 50px;
         object-fit: cover;
         padding: 50px;
         border: 10px ;
@@ -292,16 +391,35 @@
     h1{
         position: absolute;
         color: white;
-        top: 38%;
+        top: 43%;
         left:25%;
         transform: translate(50%);
-
-
     }
+
+
+    .text{
+
+        color:white;
+        font-size:39px;
+        visibility: hidden;
+    }
+    
+    .mask {
+        margin: 5px;
+        width:300px;
+        height: 70px;
+        background-color: aqua;
+        overflow:hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+
     p{
         position: absolute;
         color: white;
-        top: 46%;
+        top: 51%;
         left: 34%;
         font-size: 1.5rem;
         em{
