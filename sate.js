@@ -13,10 +13,21 @@ var swiper = new Swiper('.swiper-container', {
     $(this).addClass("active");      
   });
 
-  function resizeInput() {
-    $("#what-we-do .mask").style.width = this.value.length + "ch";
-  }
+  var x = document.querySelector(".group-video .active").textContent;
+  document.querySelector("#what-we-do .mask2 .text").innerHTML = "<i class=\"fas fa-arrow-left\"></i> "+x + "&nbsp; &nbsp;";  
+  // document.querySelector("#play-it").src = "./asset/video/"+ x;  
+  document.querySelector("#play-it").setAttribute('src', "./asset/video/"+ x);
+  document.querySelector("#tmplt-play-it").load();
+  // document.querySelector("#tmplt-play-it").play();
 
-  var input = document.querySelector('#what-we-do .text'); // get the input element
-input.addEventListener('#what-we-do .text', resizeInput); // bind the "resizeInput" callback on "input" event
-resizeInput.call(input); // immediately call the function
+
+
+  $(document).ready(function(){
+    $(".button-switch-video").on('click', function(e) {
+      x = document.querySelector(".group-video .active").textContent;
+      document.querySelector("#what-we-do .mask2 .text").innerHTML = "<i class=\"fas fa-arrow-left\"></i> "+x + "&nbsp; &nbsp;";  
+      // document.querySelector("#play-it").src = "./asset/video/"+ x;  
+      document.querySelector("#play-it").setAttribute('src', "./asset/video/"+ x);
+      document.querySelector("#tmplt-play-it").load();
+    });
+  });

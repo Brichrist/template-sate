@@ -125,7 +125,7 @@ tl_productrow3.from(".row-3 .card",{opacity:0,duration:1,x:100,stagger:0.5})
 
 
 
-const tl_eventtextcontent = gsap.timeline({ 
+let tl_eventtextcontent = gsap.timeline({ 
   defaults: { duration: 3},
   
   repeat:-1
@@ -143,7 +143,7 @@ tl_eventtextcontent.to(".text-content .h1-4", { autoAlpha: 0,delay: 1.7 })
 tl_eventtextcontent.from(".text-content .h1-1", { autoAlpha: 0},"-=2")
 tl_eventtextcontent.to(".text-content .h1-1", { autoAlpha: 0 })
 
-const tl_eventtextcontentimg = gsap.timeline({ 
+let tl_eventtextcontentimg = gsap.timeline({ 
   defaults: { duration: 3},
   
   repeat:-1
@@ -189,12 +189,32 @@ $(document).on("mouseenter", "#what-we-do .button-play", function() {
   hover_playbuttonaction.pause();
 });
 
-TweenLite.defaultEase = Power0.easeNone;
+$(document).ready(function(){
+$(".button-switch-video").on('click', function(e) {
+  $(".mask2").removeAttr("style");
+  let tl_anmtvideolist = gsap.timeline()
 
-var tl_popup = new TimelineMax ();
+  // tl_anmtvideolist.set(".mask", {transformOrigin:"100% 50%"});
+  tl_anmtvideolist.from(".mask2", 1.5, {width:"0px"})
+  // tl_anmtvideolist.set(".mask", {transformOrigin:"100% 50%"});
+  tl_anmtvideolist.to(".mask2", 1.5, {delay:1,width:"0px"})
+});
+});
 
-tl_popup.from($(".mask2"),2,{width:0},1)
-// .from($("#rect"),2,{left:400},1)
-.to($(".text"),0.05,{autoAlpha:0, repeat:5, yoyo:true})
-// TweenMax.from(".mask1", 2.2, {width:"0px",  ease:Power0.easeNone, repeat:-1, repeatDelay:2})
-// TweenMax.from(".mask2", 2.2, {width:"0px", ease:Power0.easeNone, repeat:-1, repeatDelay:2})
+$(document).ready(function(){
+  $(".mask2").mouseenter(function(){
+    $(".mask2").removeAttr("style");
+  });
+});
+
+// TweenMax.set(".mask", {width:"0%"});
+
+document.querySelector(".mask2").addEventListener("mouseenter", () => {
+  gsap.from(".mask2", { duration: 1, width: "0px",});  
+});
+
+document.querySelector(".mask2").addEventListener("mouseleave", () => {
+  gsap.to(".mask2", { duration: 1, width: "0px" });
+ 
+});
+

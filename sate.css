@@ -436,6 +436,7 @@ html {
 #what-we-do {
   position: relative;
   height: 110vh;
+  z-index: 1;
 }
 
 #what-we-do .shadow-button-play {
@@ -443,7 +444,7 @@ html {
   height: 180px;
   width: 180px;
   border-radius: 50%;
-  top: 35.8%;
+  top: 36.4%;
   left: 25%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -479,6 +480,13 @@ html {
   font-weight: 800;
 }
 
+#what-we-do .button-share:hover {
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+  transition: background-color 0.3s linear, color 0.3s linear;
+  background-color: black;
+  color: white;
+}
+
 #what-we-do .button-join-us {
   position: absolute;
   height: 50px;
@@ -493,6 +501,10 @@ html {
   font-size: 0.9rem;
 }
 
+#what-we-do .button-join-us:hover {
+  background-color: rgba(161, 161, 161, 0.5);
+}
+
 #what-we-do .button-list-video {
   position: absolute;
   height: 50px;
@@ -505,6 +517,10 @@ html {
   color: white;
   font-weight: 800;
   font-size: 0.9rem;
+}
+
+#what-we-do .button-list-video:hover {
+  background-color: rgba(161, 161, 161, 0.5);
 }
 
 #what-we-do .background {
@@ -542,19 +558,22 @@ html {
 
 #what-we-do .text {
   color: white;
-  font-size: 39px;
-  visibility: hidden;
+  font-size: 20px;
+  margin-top: 5px;
 }
 
 #what-we-do .mask {
   margin: 5px;
-  width: 300px;
-  height: 70px;
-  background-color: aqua;
+  padding-right: 30px;
+  padding-left: 10px;
+  display: inline;
+  border-radius: 40px;
+  height: 40px;
+  background-color: rgba(161, 161, 161, 0.5);
   overflow: hidden;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 27%;
+  right: 20%;
 }
 
 #what-we-do p {
@@ -567,5 +586,65 @@ html {
 
 #what-we-do p em {
   color: #9c9c9c;
+}
+
+#testimoni {
+  background-color: #003102;
+  color: #ffb008;
+}
+
+#testimoni .row {
+  padding-bottom: 35vh;
+  position: relative;
+}
+
+#testimoni .col-lg-7 {
+  padding-top: 170px;
+}
+
+#testimoni .text-stay {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 200px;
+}
+
+#testimoni .text-stay h1 {
+  margin-left: 90px;
+  margin-right: 30px;
+}
+
+#testimoni .text-stay p {
+  margin-left: 90px;
+  margin-right: 30px;
+}
+
+#testimoni .parallelogram {
+  width: 500px;
+  height: 200px;
+  margin-left: -130px;
+  margin-right: -100px;
+  -webkit-transform: skew(-25deg) rotate(65deg);
+          transform: skew(-25deg) rotate(65deg);
+  background: #555;
+}
+
+#testimoni .photo-testi-1-child {
+  position: relative;
+  width: 240px;
+  height: 420px;
+  margin-top: -80px;
+}
+
+#testimoni .photo-testi-1 {
+  position: relative;
+  padding-left: 60px;
+}
+
+#testimoni .photo-testi-1 .first {
+  margin-top: -100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: -20% 0;
+     object-position: -20% 0;
 }
 /*# sourceMappingURL=sate.css.map */

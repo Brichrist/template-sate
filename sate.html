@@ -47,9 +47,9 @@
         </div>
     </nav>
 
-    <section id="splash-screen" class="fixed-top">
+    <!-- <section id="splash-screen" class="fixed-top">
       <img class="logo-splash-screen" src="asset/(FIX)LOGO 4 (1).png" alt="">
-    </section>
+    </section> -->
 
     <section id="home">
         <img id=sobek src="asset/Untitled-1.png" alt="">
@@ -237,39 +237,94 @@
       </video>
       <div class="block"></div>
       <div class="shadow-button-play"></div>
-      <button type="button" class="btn button-play"><i class="fas fa-play fa-3x"></i></button>
+      <button type="button"  class="btn button-play" data-bs-toggle="modal" data-bs-target="#video-play-modal"><i class="fas fa-play fa-3x"></i></button>
       <h1>What We Do ?</h1> 
       <p >This is what we do! <em>(click play button)</em></p> 
       <button type="button" class="btn button-share">SHARE</button>
       <a href="#" class="button-join-us text-center"><i class="fas fa-user-friends fa-2x"></i><br>JOIN US</a>
       <a href="#" class="button-list-video text-center" data-bs-toggle="modal" data-bs-target="#list-video" ><i class="fas fa-list fa-2x"></i><br>LIST</a>
-      <div class="mask mask2">
-        <div class="text">TestingTestingTesting</div>
+      <div class="mask mask2" style="width: 0px;">
+        <div class="text"></div>
       </div>
     </section>
 
+    <section id="testimoni">
+      <div class="row relative">
+        <div class="col-lg-7 ">
+          <div class="text-stay">
+            <h1 class="text-center display-4" >Pasti Repeat Order</h1>
+            <p class="text-center">kemarin saya tiba tiba di chat sama pemilik, 
+              saya kenal tetapi sudah lama juga nda ketemu. 
+              saya nda tau kenapa nih jadi saya bales aja eh 
+              ternyata dia cuman nawari sate jualan dia. ya udah aku pesen kan namanya juga temen, 
+              waktu dateng anteri kami bocara basa basi dikit dah trus waktu
+              aku bayar aku kaget ternyta nda perlu ongkir katanya untu promosi juga.
+              ya udah setelah aku bayar, dia pulang trus aku coba tuh makan di dalem aku kaget kok 
+              beda dari sate yang pernah aku makan aku juga kaget klo satenya khas nda pake brambang.
+              tekstur bumbu juara sih ini namanya dagingnya juga udah baceman yang aku rasakan. REPEAT ORDER SIH INI</p>
+            </div>
+        </div>
 
+        <div class="col-lg-3 ">
+          <div class="parallelogram"></div>
+          <!-- <img src="./asset/png toon/png-testi/Untitled-1-Recovered.png" class="photo-testi-1-child first" alt="">
+          <img src="./asset/png toon/png-testi/Untitled-2-Recovered.png" class="photo-testi-1-child" alt="">
+          <img src="./asset/png toon/png-testi/Untitled-3-Recovered.png" class="photo-testi-1-child" alt="">
+          <img src="./asset/png toon/png-testi/Untitled-4-Recovered.png" class="photo-testi-1-child" alt=""> -->
+        </div>
+        <div class="col-lg-2 ">
+          <div class="parallelogram"></div>
 
-<div class="modal fade" id="list-video" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="list-video-Label" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="list-video-Label">Video List</h5>
+          <!-- <img src="./asset/png toon/png-testi/blacky.png" class="photo-testi-2-child first" alt="">
+          <img src="./asset/png toon/png-testi/Untitled-5-Recovered.png" class="photo-testi-2-child " alt="">
+          <img src="./asset/png toon/png-testi/Untitled-6-Recovered.png" class="photo-testi-2-child" alt="">
+          <img src="./asset/png toon/png-testi/Untitled-7-Recovered.png" class="photo-testi-2-child" alt="">
+          <img src="./asset/png toon/png-testi/Untitled-8-Recovered.png" class="photo-testi-2-child" alt=""> -->
+        </div>
+
       </div>
-      <div class="modal-body">
-        <div class="list-group group-video">
-          <a class="list-group-item list-group-item-action switch-active active">The current link item</a>
-          <a class="list-group-item list-group-item-action switch-active">A second link item</a>
-          <a class="list-group-item list-group-item-action switch-active">A third link item</a>
-          <a class="list-group-item list-group-item-action switch-active">A fourth link item</a>
+    </section>
+
+    <div class="modal fade" id="list-video" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="list-video-Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="list-video-Label">Video List</h5>
+          </div>
+          <div class="modal-body">
+            <div class="list-group group-video">
+              <a class="list-group-item list-group-item-action switch-active active">video1.mp4</a>
+              <a class="list-group-item list-group-item-action switch-active">video2.mp4</a>
+              <a class="list-group-item list-group-item-action switch-active">video3.mp4</a>
+              <a class="list-group-item list-group-item-action switch-active">video4.mp4</a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary button-switch-video" data-bs-dismiss="modal">Choose This One</button>
+          </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Choose This One</button>
+    </div>
+
+    
+
+    <div class="modal fade" id="video-play-modal" tabindex="-1" aria-labelledby="video-play-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="video-play-modal-label">enjoy</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <video width="1105" height="450" id="tmplt-play-it" controls autoplay>
+              <source id="play-it" src="" type="video/mp4">
+            </video>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+
+
 
 <br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>
