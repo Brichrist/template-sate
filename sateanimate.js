@@ -218,3 +218,36 @@ document.querySelector(".mask2").addEventListener("mouseleave", () => {
  
 });
 
+
+
+// gsap.registerPlugin(ScrollTrigger);
+
+
+gsap.utils.toArray(".box-img-testi").forEach(boximgtesti => {
+  let tl_testiimg = gsap.timeline({
+    scrollTrigger: {
+      trigger:boximgtesti,
+      // toggleActions: "restart none none none",
+      start: "top 100%",
+    }
+  });
+
+  tl_testiimg.from(boximgtesti, {
+    opacity:0,duration:1,y:300
+  });
+});
+
+gsap.utils.toArray(".box-img-testi2").forEach(boximgtesti2 => {
+  let tl_testiimg2 = gsap.timeline({
+    scrollTrigger: {
+      trigger:boximgtesti2,
+      // toggleActions: "restart none none none",
+      start: "top 100%",
+      
+    }
+  });
+
+  tl_testiimg2.from(boximgtesti2, {
+    opacity:0,duration:1,y:300
+  });
+});

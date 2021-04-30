@@ -457,15 +457,14 @@ html {
         // border: 10px solid black;
         padding-bottom: 35vh;
         position: relative;
+        width: 100;
         
     }
-    .col-lg-7{
-        padding-top: 170px;
-        // border: 10px solid black;
-
-    }
+    
+    
     .text-stay{
         position: sticky;
+        // visibility: hidden;
         // background: red;
         top:200px;
         h1{
@@ -477,31 +476,103 @@ html {
             margin-right: 30px;
         }
     }
-    
-    .parallelogram {
-        width: 500px;
+    .col-lg-7{
+        padding-top: 170px;
+        // border: 10px solid black;
+        .deactivate{
+            display: none;
+        }
+
+    }
+    .col-lg-3{
+        padding-left: 100px;
+    }
+    .box-img-testi{
+        position: relative;
+        top: 40px;
+        margin-top: 10px;
+        overflow: hidden;
+        width: 200px;
         height: 200px;
-        margin-left: -130px;     
-        margin-right:-100px;   
-        transform: skew(-25deg) rotate(65deg);
-        background: #555;
+        border-radius: 30px;
+        border: 2px solid rgb(0, 0, 0);
+        
+        .photo-testi-1-child{
+            width: 200px;
+            height: 200px;
+            border-radius: 30px;
+            object-fit: cover; 
+            object-position: 50%;
+            transition:1s ease;
+            z-index: 0;
+        }
+        
+        .middle {
+            transition:1s ease;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+            background-image: linear-gradient(rgba(0, 0, 0,0.3),rgba(0, 0, 0,0.5));
+            top: 0%;
+            border-radius: 30px;
+
+            text-align: center;
+            &:hover{
+                background-image: linear-gradient(rgba(255, 255, 255, 0) 60%, rgba(255, 174, 0,0.5) );
+                & + .photo-testi-1-child{
+                    transform: scale(1.3);
+                }
+            }
+        }
+        .active{
+            background-image: linear-gradient(rgba(255, 255, 255, 0) 60%, rgba(255, 174, 0,0.5) );
+        }
     }
 
-    .photo-testi-1-child{
-        position: relative;
-        width: 240px;
-        height: 420px;
-        margin-top: -80px;
-    }
-    .photo-testi-1{
-        // border: 2px solid black;
 
+    .box-img-testi2{
         position: relative;
-        // width: 100px;
-        padding-left: 60px;
-        .first{
-            margin-top: -100px;
-            object-fit: cover; object-position: -20% 0;
+        top: 40px;
+        margin-top: 10px;
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        border-radius: 30px;
+        border: 2px solid rgb(0, 0, 0);
+        margin-left: -40px;
+        padding-right: 0px;
+        
+        .photo-testi-1-child{
+            width: 200px;
+            height: 200px;
+            border-radius: 30px;
+            object-fit: cover; 
+            object-position: 50%;
+            transition:1s ease;
+            z-index: 0;
+        }
+        
+        .middle {
+            transition:1s ease;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+            background-image: linear-gradient(rgba(0, 0, 0,0.3),rgba(0, 0, 0,0.5));
+            top: 0%;
+            border-radius: 30px;
+
+            text-align: center;
+            &:hover{
+                background-image: linear-gradient(rgba(255, 255, 255, 0) 60%, rgba(255, 174, 0,0.5) );
+                & + .photo-testi-1-child{
+                    transform: scale(1.3);
+                }
+            }
+        }
+        .active{
+            background-image: linear-gradient(rgba(255, 255, 255, 0) 60%, rgba(255, 174, 0,0.5) );
         }
     }
     
