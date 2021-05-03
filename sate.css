@@ -527,7 +527,11 @@ html {
   height: 100%;
   position: absolute;
   width: 100%;
-  background-color: black;
+  background-image: url(./asset/alex.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #what-we-do .block {
